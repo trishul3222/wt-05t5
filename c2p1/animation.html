@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><b>Animation</b></title>
+    </head>
+        <style>
+            b{
+                display: inline-block;
+                margin-top: 50px;
+                padding: 20px 30px;
+                background-color: green;
+                animation: moveBanner 6s linear infinite;
+            }
+            @keyframes moveBanner{
+                from{
+                    transform: translateX(50px);
+                }
+                to{
+                    transform: translateX(800px);
+                }
+            }
+        </style>
+        <body>
+            <b>yaswanth going for milk</b>
+        </body>
+</html>

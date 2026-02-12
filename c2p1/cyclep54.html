@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <!--VIEWPORT META TAG-->
+        <meta name = "viewport" content = "width=device-weidth, initial-scale = 1.0">
+        <title>Viewport & media Query demo</title>
+        <style>
+            .info{
+                text-align: center;
+                padding: 15px;
+                font-size: 18px;
+            }
+            .container{
+                display: flex;
+                gap: 10px;
+                padding: 10px;
+            }
+            .box{
+                padding: 30px;
+                background-color: #f8bbd0;
+                text-align: center;
+                font-size: 20px;
+                width: 300px;
+                animation: moveBox 1s linear infinite;
+            }
+            @keyframes moveBox{
+                0%{
+                    transform: translateX(0px) rotate(0deg);
+                }
+                100%{
+                    transform: translateX(500px) rotate(360deg);
+                }
+            }
+            .info::after{
+                content: "Desktop view(?> 992)";
+            }
+            /*=====Tablet =====*/
+            @media (max-width: 992px){
+                body{
+                    background: #fff3e0;
+                }
+                .box{
+                    background: #fce4ec;
+                }
+                .info::after{
+                    content: "Tablet view(?992px)";
+                }
+            }
+            @media(max-width: 600px){
+                body{
+                    background: #fce4ec;
+                }
+                .container{
+                    flex-direction: column;
+                }
+                .box{
+                    background: #f48fb1;
+                }
+                .info::after{
+                    content: "Mobile view(?600px)";
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1>viewport & media query demo</h1>
+        </header>
+        <div class ="info">Resize the browser</div>
+        <div class="container">
+            <div class="box">Box 1</div>
+            <div class="box">Box 2</div>
+            <div class="box">Box 3</div>
+    </body>
+</html>
