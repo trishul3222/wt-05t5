@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Sample Shopping Cart</h1>
+</header>
+
+<main>
+    <section id="product-list">
+        <h2>Products</h2>
+
+        <div class="product">
+            <span>Wireless Mouse</span>
+            <button onclick="addToCart('Wireless Mouse', 1000)">
+                Add to Cart (Rs.1000)
+            </button>
+        </div>
+
+        <div class="product">
+            <span>USB Keyboard</span>
+            <button onclick="addToCart('USB Keyboard', 2500)">
+                Add to Cart (Rs.2500)
+            </button>
+        </div>
+
+        <div class="product">
+            <span>Bluetooth Headphones</span>
+            <button onclick="addToCart('Bluetooth Headphones', 5000)">
+                Add to Cart (Rs.5000)
+            </button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will be added here -->
+        </ul>
+        <p id="totalPrice">Total Price: Rs.0</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Shopping Cart Example</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

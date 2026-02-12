@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Asynchronous Data Fetching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Asynchronous Data Fetching</h1>
+</header>
+
+<main>
+    <button onclick="fetchData()">Load Users</button>
+
+    <div id="loading" style="display:none;">Loading users...</div>
+
+    <table id="data">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+            <!-- Data will be added dynamically -->
+        </tbody>
+    </table>
+
+    <p id="timestamp"></p>
+</main>
+
+<footer>
+    &copy; 2025 Asynchronous Data Fetching
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
