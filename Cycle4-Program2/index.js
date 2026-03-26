@@ -1,0 +1,15 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+
+const router = require('./route/bookRoute');
+app.use('/books', router);
+
+// Start server
+app.listen(3001, () => {
+    console.log('Server is running on port 3001');
+});
